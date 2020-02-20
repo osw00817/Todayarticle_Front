@@ -44,8 +44,10 @@ const useStyles = makeStyles(theme => ({
   }
 
   callApi = async() => {
-    const response = await fetch('/korea/infect');
-    const body = await response.json();
+    let body;
+    const response = await fetch('/korea/infect')
+    .then((res) => res.json())
+    .then((data) => body = data);
     return body;
   }
   
@@ -82,8 +84,10 @@ render() {
   }
 
   callApi = async() => {
-    const response = await fetch('/weather/seoul');
-    const body = await response.json();
+    let body;
+    const response = await fetch('/weather/seoul')
+    .then((res) => res.json())
+    .then((data) => body = data);
     return body;
   }
   
@@ -117,8 +121,10 @@ render() {
   }
 
   callApi = async() => {
-    const response = await fetch('/naver/ranking');
-    const body = await response.json();
+    let body;
+    const response = await fetch('/naver/ranking')
+    .then((res) => res.json())
+    .then((data) => body=data);
     return body;
   }
 
