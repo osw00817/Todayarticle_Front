@@ -1,7 +1,6 @@
-import React, { component } from 'react';
+import React  from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import {Grid, Paper,List,ListItem,ListItemText,ListItemIcon} from '@material-ui/core'
-import { FixedSizeList } from 'react-window'
+import {Grid, Paper,ListItem,ListItemText,ListItemIcon} from '@material-ui/core'
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -45,7 +44,7 @@ const useStyles = makeStyles(theme => ({
   }
 
   callApi = async() => {
-    const response = await fetch('http://today-article.herokuapp.com/korea/infect');
+    const response = await fetch('/korea/infect');
     const body = await response.json();
     return body;
   }
@@ -83,7 +82,7 @@ render() {
   }
 
   callApi = async() => {
-    const response = await fetch('http://today-article.herokuapp.com/weather/seoul');
+    const response = await fetch('/weather/seoul');
     const body = await response.json();
     return body;
   }
@@ -118,7 +117,7 @@ render() {
   }
 
   callApi = async() => {
-    const response = await fetch('http://today-article.herokuapp.com/naver/ranking');
+    const response = await fetch('/naver/ranking');
     const body = await response.json();
     return body;
   }
