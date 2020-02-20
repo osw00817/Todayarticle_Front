@@ -170,16 +170,20 @@ class Header extends React.Component {
       );
     } else {
       return (
-        <div className={classes.root}>
+        <div style={{ flexGrow: 1,
+          marginTop: '50px'}} className={classes.root}>
         <Grid container item xs={12} spacing={4} justify="center">
             <Grid item xs={3}>
-              <Paper className={classes.paper}><Rank /></Paper>
+              <Paper style={{height:'500px',
+      textAlign: 'center'}}><Rank /></Paper>
             </Grid>
             <Grid item xs={3}>
-            <Paper className={classes.paper}><Weather /></Paper>
+            <Paper style={{height:'500px',
+     textAlign: 'center'}}><Weather /></Paper>
             </Grid>
             <Grid item xs={3}>
-            <Paper className={classes.paper}><Infect /></Paper>
+            <Paper style={{height:'500px',
+      textAlign: 'center'}}><Infect /></Paper>
             </Grid>
         </Grid>
         </div>
