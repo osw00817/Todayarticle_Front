@@ -45,7 +45,7 @@ const useStyles = makeStyles(theme => ({
   }
 
   callApi = async() => {
-    const response = await fetch('/korea/infect');
+    const response = await fetch('http://today-article.herokuapp.com/korea/infect');
     const body = await response.json();
     return body;
   }
@@ -83,7 +83,7 @@ render() {
   }
 
   callApi = async() => {
-    const response = await fetch('/weather/seoul');
+    const response = await fetch('http://today-article.herokuapp.com/weather/seoul');
     const body = await response.json();
     return body;
   }
@@ -118,7 +118,7 @@ render() {
   }
 
   callApi = async() => {
-    const response = await fetch('/naver/ranking');
+    const response = await fetch('http://today-article.herokuapp.com/naver/ranking');
     const body = await response.json();
     return body;
   }

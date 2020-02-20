@@ -30,7 +30,7 @@ export default function Main() {
   };
   const handlesubmit = e => {
     e.preventDefault();
-    window.location.href=`http://localhost:3000/${target}`;
+    window.location.href=`https://friendly-mahavira-49926b.netlify.com/${target}`;
   }
   return (
     <div className="Main">
@@ -46,7 +46,7 @@ export default function Main() {
                       inputProps={{ 'aria-label': '뉴스검색하기' }}
                       onChange={onChangetarget}
                     />
-                    <IconButton type="submit" className={classes.iconButton} aria-label="search" onClick = {() => {window.location.href=`http://localhost:3000/news/${target}`}}>
+                    <IconButton type="submit" className={classes.iconButton} aria-label="search" onClick = {() => {window.location.href=`https://friendly-mahavira-49926b.netlify.com/news/${target}`}}>
                       <SearchIcon />
                     </IconButton>
                   </Paper>

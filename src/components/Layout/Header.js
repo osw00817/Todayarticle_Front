@@ -11,8 +11,8 @@ export default function Header() {
     return(
         <AppBar position="sticky" height="75%" color="inherit">
         <Toolbar className={classes.toolbar}>
-            <Typography href="http://localhost:3000" className="title" variant="h6">
-               <a style={{textDecoration:'none',color:'black'}} href="http://localhost:3000">News</a>
+            <Typography href="https://friendly-mahavira-49926b.netlify.com" className="title" variant="h6">
+               <a style={{textDecoration:'none',color:'black'}} href="https://friendly-mahavira-49926b.netlify.com">News</a>
             </Typography>
         </Toolbar>
         </AppBar>
