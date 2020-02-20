@@ -1,0 +1,6 @@
+[[redirects]]
+  from = "/weather/seoul"
+  to = "http://today-article.herokuapp.com/weather/seoul"
+  status = 200
+  force = true
+  headers = {X-From = "Netlify"}

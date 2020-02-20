@@ -1,6 +1,7 @@
-import React  from 'react';
+import React, { component } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import {Grid, Paper,ListItem,ListItemText,ListItemIcon} from '@material-ui/core'
+import {Grid, Paper,List,ListItem,ListItemText,ListItemIcon} from '@material-ui/core'
+import { FixedSizeList } from 'react-window'
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -22,20 +23,41 @@ const useStyles = makeStyles(theme => ({
   }));
   //
   class Infect extends React.Component {
+    state = {
+      name:'',
+      infect: '',
+      die: '',
+      cure: '',
+    }
+
   componentDidMount(){
     this.callApi()
+    .then(res => {
+        this.setState({
+          name:res[0].name,
+          infect: res[0].infect,
+          die: res[0].die,
+          cure: res[0].cure,
+        }) 
+        console.log(res);
+    })
+    .catch(err => console.log(err))
   }
 
   callApi = async() => {
-    let body;
-    const response = await fetch('/korea/infect')
-    .then((res) => console.log(res));
+    const response = await fetch('/korea/infect');
+    const body = await response.json();
+    return body;
   }
   
 render() {
     return(
         <div>
-          
+          <h1>코로나 현황</h1>
+          <p style={{marginTop:150}}>{this.state.name}</p>
+          <p>감염자수: {this.state.infect}</p>
+          <p>사망자수: {this.state.die}</p>
+          <p>치료자수: {this.state.cure}</p>
           </div>
     )
 }
@@ -61,10 +83,8 @@ render() {
   }
 
   callApi = async() => {
-    let body;
-    const response = await fetch('/weather/seoul')
-    .then((res) => res.json())
-    .then((data) => body = data);
+    const response = await fetch('/weather/seoul');
+    const body = await response.json();
     return body;
   }
   
@@ -98,9 +118,8 @@ render() {
   }
 
   callApi = async() => {
-    const response = await fetch('/naver/ranking')
-    .then((res) => console.log(res))
-    const body = response.json();
+    const response = await fetch('/naver/ranking');
+    const body = await response.json();
     return body;
   }
 
@@ -121,10 +140,10 @@ export default function Header() {
     return (
       <React.Fragment>
         <Grid item xs={3}>
-          <Paper className={classes.paper}></Paper>
+          <Paper className={classes.paper}><Rank /></Paper>
         </Grid>
         <Grid item xs={3}>
-          <Paper className={classes.paper}></Paper>
+          <Paper className={classes.paper}><Weather /></Paper>
         </Grid>
         <Grid item xs={3}>
           <Paper className={classes.paper}><Infect /></Paper>
