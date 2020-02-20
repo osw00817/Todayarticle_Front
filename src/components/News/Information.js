@@ -162,7 +162,7 @@ class Header extends React.Component {
   
     if (isMobile) {
       return (
-        <div className={classes.root}>
+        <div style={{marginTop: '70px'}} className={classes.root}>
         <Paper className="mobile" style={{marginBottom:30,width:300}}><Rank /></Paper>
         <Paper className="mobile" style={{marginBottom:50,height:400,width:300,textAlign:"center"}}><Weather /></Paper>
         <Paper className="mobile" style={{marginBottom:30,height:400,width:300,textAlign:"center"}}><Infect /></Paper>
