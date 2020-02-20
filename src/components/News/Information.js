@@ -1,5 +1,5 @@
 import React, { component } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, withStyles } from '@material-ui/core/styles';
 import {Grid, Paper,List,ListItem,ListItemText,ListItemIcon} from '@material-ui/core'
 import { FixedSizeList } from 'react-window'
 
@@ -134,29 +134,58 @@ render() {
 }
 }
 
-export default function Header() {
-  const classes = useStyles();
-    function FormRow() {
-    return (
-      <React.Fragment>
-        <Grid item xs={3}>
-          <Paper className={classes.paper}><Rank /></Paper>
-        </Grid>
-        <Grid item xs={3}>
-          <Paper className={classes.paper}><Weather /></Paper>
-        </Grid>
-        <Grid item xs={3}>
-          <Paper className={classes.paper}><Infect /></Paper>
-        </Grid>
-      </React.Fragment>
-    );
+class Header extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      width: window.innerWidth,
+    };
+  }
+  
+  componentWillMount() {
+    window.addEventListener('resize', this.handleWindowSizeChange);
   }
 
-  return (
-    <div className={classes.root}>
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleWindowSizeChange);
+  }
+  
+  handleWindowSizeChange = () => {
+    this.setState({ width: window.innerWidth });
+  };
+  
+  render() {
+    const { classes } = this.props;
+    const { width } = this.state;
+    const isMobile = width <= 1000;
+    // the rest is the same...
+  
+    if (isMobile) {
+      return (
+        <div className={classes.root}>
+        <Paper className="mobile" style={{marginBottom:30,width:300}}><Rank /></Paper>
+        <Paper className="mobile" style={{marginBottom:50,height:400,width:300,textAlign:"center"}}><Weather /></Paper>
+        <Paper className="mobile" style={{marginBottom:30,height:400,width:300,textAlign:"center"}}><Infect /></Paper>
+      </div>
+      );
+    } else {
+      return (
+        <div className={classes.root}>
         <Grid container item xs={12} spacing={4} justify="center">
-          <FormRow />
+            <Grid item xs={3}>
+              <Paper className={classes.paper}><Rank /></Paper>
+            </Grid>
+            <Grid item xs={3}>
+            <Paper className={classes.paper}><Weather /></Paper>
+            </Grid>
+            <Grid item xs={3}>
+            <Paper className={classes.paper}><Infect /></Paper>
+            </Grid>
         </Grid>
-    </div>
-  );
+        </div>
+      );
+    }
+  }
 }
+
+export default withStyles(useStyles)(Header);
