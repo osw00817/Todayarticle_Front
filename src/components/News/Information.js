@@ -124,7 +124,7 @@ render() {
     let body;
     const response = await fetch('/naver/ranking')
     .then((res) => res.json())
-    .then((data) => body=data);
+    .then((data) => console.log(data));
     return body;
   }
 
