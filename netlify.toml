@@ -1,3 +1,7 @@
+[build]
+  command = "npm install && cd site && npm install && npm run build"
+  publish = "publish"
+
 [[redirects]]
   from = "/weather/seoul"
   to = "http://today-article.herokuapp.com/weather/seoul"
