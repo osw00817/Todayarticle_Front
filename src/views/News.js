@@ -8,7 +8,6 @@ import '../components/News/news.css'
 export default function Main({match}) {
     return(
         <Fragment>
-            <Header />
             <News target={match.params.target}/>
         </Fragment>
     )

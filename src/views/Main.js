@@ -8,7 +8,6 @@ import '../components/News/Information.css'
 export default function Main() {
     return(
         <Fragment>
-            <Header />
             <Search />
             <Information />
         </Fragment>
