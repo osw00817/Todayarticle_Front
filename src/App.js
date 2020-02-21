@@ -9,7 +9,6 @@ export default function App(){
           <Fragment>
               <Switch>
                 <Route exact path="/" component={Main} />
-                <Route path="/news/" component={Main} />
                 <Route path="/:target" component={Article} />
               </Switch>
           </Fragment>
