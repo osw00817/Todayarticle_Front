@@ -30,7 +30,7 @@ export default function Main() {
   };
   const handlesubmit = e => {
     e.preventDefault();
-    window.location.href=` http://192.168.55.202:5000/${target}`;
+    window.location.href=`https://tonews.netlify.com/${target}`;
   }
   return (
     <div className="Main">
