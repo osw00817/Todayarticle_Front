@@ -1,21 +1,3 @@
 [build]
   command = "npm install && npm run build"
   publish = "build"
-
-[[redirects]]
-  from = "/weather/seoul"
-  to = "https://today-article.herokuapp.com/weather/seoul"
-  status = 301
-  force = true
-
-  [[redirects]]
-  from = "/korea/infect"
-  to = "https://today-article.herokuapp.com/korea/infect"
-  status = 301
-  force = true
-
-  [[redirects]]
-  from = "/naver/ranking"
-  to = "https://today-article.herokuapp.com/naver/ranking"
-  status = 301
-  force = true
