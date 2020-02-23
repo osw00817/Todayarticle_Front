@@ -4,21 +4,18 @@
 
 [[redirects]]
   from = "/weather/seoul"
-  to = "http://today-article.herokuapp.com/weather/seoul"
-  status = 200
+  to = "https://today-article.herokuapp.com/weather/seoul"
+  status = 301
   force = true
-  headers = {X-From = "Netlify"}
 
   [[redirects]]
   from = "/korea/infect"
-  to = "http://today-article.herokuapp.com/korea/infect"
-  status = 200
+  to = "https://today-article.herokuapp.com/korea/infect"
+  status = 301
   force = true
-  headers = {X-From = "Netlify"}
 
   [[redirects]]
   from = "/naver/ranking"
-  to = "http://today-article.herokuapp.com/naver/ranking"
-  status = 200
+  to = "https://today-article.herokuapp.com/naver/ranking"
+  status = 301
   force = true
-  headers = {X-From = "Netlify"}
