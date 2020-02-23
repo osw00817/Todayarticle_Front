@@ -27,6 +27,5 @@
   from = "/naver/news"
   to = "http://today-article.herokuapp.com/naver/news"
   status = 200
-  force = false
-  query = {search = ":search} # apply this rule for /?path=example
-  conditions = {Role = ["admin"]}
+  force = true
+  headers = {X-From = "Netlify"}
