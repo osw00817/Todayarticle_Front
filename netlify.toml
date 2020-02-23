@@ -29,4 +29,3 @@
   status = 200
   force = fail
   query = {path = ":path"}
-  headers = {X-From = "Netlify"}
