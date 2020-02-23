@@ -1,1 +1,2 @@
+/new search=:search https://today-article.herokuapp.com/naver/news?search=:search 301
 /*   /index.html   200

@@ -22,10 +22,3 @@
   status = 200
   force = true
   headers = {X-From = "Netlify"}
-
-  [[redirects]]
-  from = "/naver/news"
-  to = "http://today-article.herokuapp.com/naver/news"
-  status = 200
-  force = true
-  headers = {X-From = "Netlify"}
