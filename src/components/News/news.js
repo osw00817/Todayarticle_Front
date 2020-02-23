@@ -37,7 +37,9 @@ class News extends React.Component {
         const target = await this.props.target ? encodeURI(this.props.target) : encodeURI("코로나 바이러스");
         await console.log(target);
         const response = await fetch('/naver/news?search='+encodeURI(this.props.target));
+        await console.log(response);
         const body = await response.json();
+        await console.log(body);
         return body;
       }
 
