@@ -34,9 +34,9 @@ class News extends React.Component {
       }
     
       callApi = async() => {
-        const target = await this.props.target ? encodeURI(this.props.target) : encodeURI("코로나 바이러스");
+        const target = await this.props.target ? (this.props.target) : ("코로나 바이러스");
         await console.log(target);
-        const response = await fetch('/naver/news?search='+encodeURI(this.props.target));
+        const response = await fetch('/naver/news?search='+ target);
         await console.log(response);
         const body = await response.json();
         await console.log(body);
