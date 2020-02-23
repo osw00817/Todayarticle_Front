@@ -1,7 +1,6 @@
-import React, { component } from 'react';
+import React from 'react';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
-import {Grid, Paper,List,ListItem,ListItemText,ListItemIcon} from '@material-ui/core'
-import { FixedSizeList } from 'react-window'
+import {Grid, Paper,ListItem,ListItemText} from '@material-ui/core'
 
 const useStyles = makeStyles(theme => ({
     root: {

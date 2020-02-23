@@ -1,5 +1,5 @@
-import React,{Fragment} from 'react';
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Main from './views/Main';
 import Article from './views/News';
 import {Header} from './components/Layout';

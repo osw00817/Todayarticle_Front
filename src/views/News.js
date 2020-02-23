@@ -1,6 +1,5 @@
 import React,{Fragment} from 'react';
-import {Header,Footer,Search} from '../components/Layout';
-import {Information,News} from '../components/News'
+import {News} from '../components/News'
 import '../components/Layout/Header.css'
 import '../components/Layout/Search.css'
 import '../components/News/news.css'
