@@ -1,2 +1,2 @@
-https://tonews.netlify.com/naver/:info http://today-article.herokuapp.com/naver/:info 301
+http://tonews.netlify.com/naver/:info http://today-article.herokuapp.com/naver/:info 301
 /*   /index.html   200
