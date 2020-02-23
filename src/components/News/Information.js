@@ -126,6 +126,7 @@ render() {
     return(
         <div>
           <h1>실시간 검색어</h1>
+          <p style={{marginTop:-20}}>(서비스 종료)</p> 
                   {this.state.rank ? this.state.rank.map(c =>{
                   return  <ListItem className="rank"><ListItemText primary={c.rank + " " + c.title} /></ListItem>}) : 'err'}
           </div>
