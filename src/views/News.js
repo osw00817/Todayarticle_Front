@@ -10,6 +10,7 @@ export default function Main({location,match}) {
     console.log(location);
     console.log(match);
     console.log(match.params.name)
+    console.log(querystring.parse(location.search));
     console.log(querystring.parse(location.search).target);
     return(
         <Fragment>
