@@ -22,3 +22,11 @@
   status = 200
   force = true
   headers = {X-From = "Netlify"}
+
+  [[redirects]]
+  from = "/*"
+  to = "http://today-article.herokuapp.com/naver/news"
+  status = 200
+  force = false
+  query = {search = ":search} # apply this rule for /?path=example
+  conditions = {Role = ["admin"]}
