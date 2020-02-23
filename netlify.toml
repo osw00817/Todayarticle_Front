@@ -24,7 +24,7 @@
   headers = {X-From = "Netlify"}
 
   [[redirects]]
-  from = "/*"
+  from = "/naver/news"
   to = "http://today-article.herokuapp.com/naver/news"
   status = 200
   force = false
