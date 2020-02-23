@@ -27,5 +27,5 @@
   from = "/naver/news"
   to = "http://today-article.herokuapp.com/naver/news"
   status = 200
-  force = fail
-  query = {path = ":path"}
+  force = true
+  query = {search = ":search"}

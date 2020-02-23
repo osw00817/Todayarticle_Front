@@ -4,11 +4,15 @@ import {Information,News} from '../components/News'
 import '../components/Layout/Header.css'
 import '../components/Layout/Search.css'
 import '../components/News/news.css'
+import querystring from 'query-string';
 
-export default function Main({match}) {
+export default function Main({location,match}) {
+    console.log(location);
+    console.log(match);
+    console.log(match.params.name)
     return(
         <Fragment>
-            <News target={match.params.target}/>
+            <News target={querystring.parse(location.search).target}/>
         </Fragment>
     )
 }

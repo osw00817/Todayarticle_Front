@@ -14,7 +14,7 @@ export default function App(){
         <Switch>
           <Route path="/" exact component={Main} />
           <Route path="/aa/aaa" component={Main} />
-          <Route path="/:target" component={Article} />
+          <Route path="/:name" component={Article} />
         </Switch>
       </div>
     </Router>
